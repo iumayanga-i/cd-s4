@@ -29,6 +29,7 @@ The code uses the EmonLib library to interface with the SCT-013 sensor:
 - Calibration value: 30 (for 20A/1V sensor)
 - Sample count: 1480 for RMS calculation
 - Serial baud rate: 9600
+- Zero threshold: 0.1A (readings below this are set to 0)
 
 ## Calibration
 
@@ -41,7 +42,7 @@ Current readings below 0.1A are automatically zeroed to filter noise.
 
 ### Calibration Data
 
-The `creative.csv` and `creative.xlsx` files contain calibration data mapping digital readings to raw voltage values.
+The `creative.csv` and `creative.xlsx` files contain calibration data mapping current values (in Amperes) to raw voltage readings (in Volts).
 
 ## Usage
 
