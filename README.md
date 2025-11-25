@@ -5,7 +5,7 @@ This project implements a current monitoring system using an Arduino and the SCT
 ## Hardware Components
 
 - Arduino board (e.g., Arduino Uno)
-- SCT-013 current transformer sensor (30A version)
+- SCT-013 current transformer sensor (configured for 20A/1V output)
 - EmonLib library for energy monitoring
 
 ## Features
@@ -38,11 +38,11 @@ The system includes a calibration formula:
 I_calibrated = 0.936609 * I_raw - 0.115665
 ```
 
-Current readings below 0.1A are automatically zeroed to filter noise.
+Current readings below 0.1A (raw) are automatically zeroed to filter noise.
 
 ### Calibration Data
 
-The `creative.csv` and `creative.xlsx` files contain calibration data mapping current values (in Amperes) to raw voltage readings (in Volts).
+The `creative.csv` and `creative.xlsx` files contain calibration data with 'Digital (A)' column representing current values in Amperes and 'Raw (V)' column representing the corresponding voltage readings in Volts.
 
 ## Usage
 
